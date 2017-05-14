@@ -1,23 +1,36 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <the-header></the-header>
+    <the-hero></the-hero>
+    <section class="section">
+      <div class="container">
+        <router-view></router-view>
+      </div>
+    </section>
+    <the-footer></the-footer>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import TheFooter from '@/components/TheFooter'
+  import TheHeader from '@/components/TheHeader'
+  import TheHero from '@/components/TheHero'
+
+  export default {
+    name: 'app',
+    components: {
+      TheFooter,
+      TheHeader,
+      TheHero
+    }
+  }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import "../node_modules/bulma/bulma.sass";
+  @import "../node_modules/font-awesome/css/font-awesome.min.css";
+
+  html {
+    /*overflow-y: hidden;*/
+  }
 </style>
