@@ -5,10 +5,10 @@
       <button class="delete" @click="hide()"></button>
     </div>
     <div class="message-body">
-      Deze tool wordt gemaakt voor een schoolproject. gebruik op eigen risico.
+      Deze tool wordt gemaakt voor een schoolproject. Gebruik op eigen risico.
       Fouten kunnen gemeld worden op GitHub via de volgende link
-      <a :href="url" v-html="url"></a> of door een e-mail
-      te sturen naar <a :href="`mailto:${email}`" v-html="email"></a>.
+      <a :href="url" v-html="url" target="_blank"></a> of door een e-mail
+      te sturen naar <a :href="`mailto:${email}`" v-html="email" target="_blank"></a>.
     </div>
   </article>
 </template>

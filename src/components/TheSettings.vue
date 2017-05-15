@@ -51,15 +51,10 @@
         })
       },
       download () {
-        let href = 'data:application/octet-stream,'
-        href += `${this.$store.getters.header}%0A`
-        _.forEach(this.$store.getters.range, (value, key) => {
-          href += `${value}%0A`
-        })
-        var link = document.createElement('a')
+        const link = document.createElement('a')
         document.body.appendChild(link)
         link.download = this.file_name
-        link.href = href
+        link.href = `data:application/octet-stream,${encodeURIComponent(this.$store.getters.header + '\r\n')}${encodeURIComponent(this.$store.getters.range.join('\r\n'))}`
         link.click()
         document.body.removeChild(link)
       }

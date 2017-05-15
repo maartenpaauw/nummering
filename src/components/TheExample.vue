@@ -23,6 +23,7 @@
 <script>
   import TheExampleHeader from '@/components/TheExampleHeader'
   import TheExampleNumber from '@/components/TheExampleNumber'
+  import { mapGetters } from 'vuex'
 
   export default {
     name: 'the-example',
@@ -31,9 +32,9 @@
       TheExampleNumber
     },
     computed: {
-      range () {
-        return this.$store.getters.range
-      }
+      ...mapGetters([
+        'range'
+      ])
     }
   }
 </script>

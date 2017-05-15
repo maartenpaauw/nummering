@@ -4,12 +4,7 @@
     <the-hero></the-hero>
     <section class="section">
       <div class="container">
-        <div class="columns">
-          <div class="column is-offset-2 is-8">
-            <the-message></the-message>
-            <router-view></router-view>
-          </div>
-        </div>
+        <router-view></router-view>
       </div>
     </section>
     <the-footer></the-footer>
@@ -18,7 +13,6 @@
 
 <script>
   import TheFooter from '@/components/TheFooter'
-  import TheMessage from '@/components/TheMessage'
   import TheHeader from '@/components/TheHeader'
   import TheHero from '@/components/TheHero'
 
@@ -26,7 +20,6 @@
     name: 'app',
     components: {
       TheFooter,
-      TheMessage,
       TheHeader,
       TheHero
     }
@@ -36,8 +29,4 @@
 <style lang="scss">
   @import "../node_modules/bulma/bulma.sass";
   @import "../node_modules/font-awesome/css/font-awesome.min.css";
-
-  html {
-    /*overflow-y: hidden;*/
-  }
 </style>

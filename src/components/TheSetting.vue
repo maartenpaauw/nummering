@@ -18,17 +18,17 @@
     },
     methods: {
       change (e) {
-        const value = () => {
-          if (this.type === 'number') {
-            return parseInt(e.target.value)
-          } else {
-            return e.target.value
-          }
-        }
         this.$store.dispatch('updateSetting', {
           setting: this.setting,
-          value: value()
+          value: this.getValue(e.target.value)
         })
+      },
+      getValue (value) {
+        if (this.type === 'number') {
+          return parseInt(value)
+        } else {
+          return value
+        }
       }
     }
   }
