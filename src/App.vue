@@ -4,7 +4,12 @@
     <the-hero></the-hero>
     <section class="section">
       <div class="container">
-        <router-view></router-view>
+        <div class="columns">
+          <div class="column is-offset-2 is-8">
+            <the-message></the-message>
+            <router-view></router-view>
+          </div>
+        </div>
       </div>
     </section>
     <the-footer></the-footer>
@@ -13,6 +18,7 @@
 
 <script>
   import TheFooter from '@/components/TheFooter'
+  import TheMessage from '@/components/TheMessage'
   import TheHeader from '@/components/TheHeader'
   import TheHero from '@/components/TheHero'
 
@@ -20,6 +26,7 @@
     name: 'app',
     components: {
       TheFooter,
+      TheMessage,
       TheHeader,
       TheHero
     }

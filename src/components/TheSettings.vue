@@ -18,7 +18,7 @@
     </div>
     <footer class="card-footer">
       <a class="card-footer-item" @click="download()" :download="file_name">Download {{ file_name }}</a>
-      <a class="card-footer-item" @click="reset()">Resetten</a>
+      <a class="card-footer-item is-danger" @click="reset()">Resetten</a>
     </footer>
   </div>
 </template>
@@ -68,5 +68,17 @@
 </script>
 
 <style lang="scss">
+  @import "../../node_modules/bulma/sass/utilities/variables";
 
+  .card-footer-item {
+    &.is-danger {
+      background-color: $red;
+      color: $white;
+      border: none;
+
+      &:hover {
+        color: $light;
+      }
+    }
+  }
 </style>

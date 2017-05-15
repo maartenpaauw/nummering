@@ -22,7 +22,7 @@
       subtitle () {
         let description = `${npm.description}.`
         _.forEach(npm.keywords, (keyword) => {
-          description = _.replace(description, keyword, `<span class="tag is-white">${keyword}</span>`)
+          description = _.replace(description, keyword, `<span class="tag is-white is-medium">${keyword}</span>`)
         })
         return description
       }
@@ -37,5 +37,9 @@
 
   .subtitle {
     margin-top: -0.5rem !important;
+  }
+
+  .tag {
+    margin-top: -0.25rem;
   }
 </style>

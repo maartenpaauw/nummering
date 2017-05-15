@@ -10,6 +10,10 @@
     "name": "Maarten Paauw",
     "email": "maartenpaauw@gmail.com"
   },
+  "bugs": {
+    "url": "https://github.com/maartenpaauw/nummering/issues",
+    "email": "maartenpaauw@gmail.com"
+  },
   "private": true,
   "repository": {
     "type": "git",

@@ -1,9 +1,9 @@
 <template>
   <div class="columns">
-    <div class="column is-offset-2 is-4">
+    <div class="column">
       <the-settings></the-settings>
     </div>
-    <div class="column is-4">
+    <div class="column">
       <the-example></the-example>
     </div>
   </div>
