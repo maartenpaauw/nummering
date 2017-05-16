@@ -5,7 +5,7 @@ dist: trusty
 
 language: node_js
 node_js:
-  - "6.9"
+  - 6.9
 
 branches:
   only:
@@ -30,8 +30,21 @@ install:
   - npm install
 
 script:
-  - 'npm run build'
+  - npm run build
+
+after_success:
+  if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+    mv dist/static/CNAME dist/
+  fi
 
 notifications:
   email:
     on_failure: always
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+  local_dir: dist
