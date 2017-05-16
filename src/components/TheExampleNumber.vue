@@ -11,7 +11,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   td {
     font-family: monospace;
   }

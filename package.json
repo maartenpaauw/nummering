@@ -26,7 +26,8 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "add-zero": "^1.0.0",
@@ -83,6 +84,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.31",
     "karma-webpack": "^2.0.2",
+    "lint-staged": "^3.4.1",
     "lolex": "^1.5.2",
     "mocha": "^3.2.0",
     "nightwatch": "^0.9.12",
@@ -91,6 +93,7 @@
     "optimize-css-assets-webpack-plugin": "^1.3.0",
     "ora": "^1.2.0",
     "phantomjs-prebuilt": "^2.1.14",
+    "pre-commit": "^1.2.2",
     "rimraf": "^2.6.0",
     "sass-loader": "^6.0.5",
     "selenium-server": "^3.0.1",
@@ -98,6 +101,9 @@
     "shelljs": "^0.7.6",
     "sinon": "^2.1.0",
     "sinon-chai": "^2.8.0",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-processor-html": "^1.0.0",
     "url-loader": "^0.5.8",
     "vue-loader": "^12.0.4",
     "vue-style-loader": "^3.0.1",
@@ -116,5 +122,16 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.vue": "eslint; stylelint --syntax scss"
+  },
+  "pre-commit": "lint-staged",
+  "stylelint": {
+    "processors": [
+      "stylelint-processor-html"
+    ],
+    "extends": "stylelint-config-standard"
+  }
 }
