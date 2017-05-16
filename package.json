@@ -125,7 +125,10 @@
   ],
   "lint-staged": {
     "*.js": "eslint",
-    "*.vue": "eslint; stylelint --syntax scss"
+    "*.vue": [
+      "eslint",
+      "stylelint --syntax scss"
+    ]
   },
   "pre-commit": "lint-staged",
   "stylelint": {
