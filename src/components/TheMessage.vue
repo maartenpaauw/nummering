@@ -40,5 +40,7 @@
 </script>
 
 <style lang="scss">
-
+  .message-body {
+    overflow-y: hidden;
+  }
 </style>
