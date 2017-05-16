@@ -31,9 +31,7 @@
   "dependencies": {
     "add-zero": "^1.0.0",
     "bulma": "^0.4.1",
-    "create-download-link": "^1.1.0",
     "font-awesome": "^4.7.0",
-    "fs": "0.0.2",
     "lodash": "^4.17.4",
     "vee-validate": "^2.0.0-rc.3",
     "vue": "^2.2.6",
