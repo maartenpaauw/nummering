@@ -32,14 +32,12 @@ install:
 script:
   - npm run build
 
-after_success:
-  if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-    mv dist/static/CNAME dist/
-  fi
-
 notifications:
   email:
     on_failure: always
+
+before_deploy:
+  - mv dist/static/CNAME dist/
 
 deploy:
   provider: pages
