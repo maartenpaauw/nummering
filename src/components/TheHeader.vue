@@ -22,3 +22,9 @@
     }
   }
 </script>
+
+<style lang="scss" scoped="scoped">
+  .nav {
+    height: 2.25rem;
+  }
+</style>
