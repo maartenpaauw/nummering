@@ -1,13 +1,9 @@
-<template>
-  <div class="nav">
-    <div class="nav-center">
-      <a class="nav-item" :href="github" target="_blank" :title="title">
-        <span class="icon">
-          <i class="fa fa-github"></i>
-        </span>
-      </a>
-    </div>
-  </div>
+<template lang="pug">
+  .nav
+    .nav-center
+      a.nav-item(:href='github', target='_blank', :title='title')
+        span.icon
+          i.fa.fa-github
 </template>
 
 <script>
@@ -26,7 +22,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-
-</style>

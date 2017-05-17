@@ -1,21 +1,14 @@
-<template>
-  <div class="columns">
-    <div class="column is-8 is-offset-2">
-      <div class="columns">
-        <div class="column">
-          <the-message></the-message>
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column">
-          <the-settings></the-settings>
-        </div>
-        <div class="column">
-          <the-example></the-example>
-        </div>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+  .columns
+    .column.is-8.is-offset-2
+      .columns
+        .column
+          the-message
+      .columns
+        .column
+          the-settings
+        .column
+          the-example
 </template>
 
 <script>
@@ -32,7 +25,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-
-</style>

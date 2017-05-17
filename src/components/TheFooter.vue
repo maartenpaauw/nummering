@@ -1,13 +1,15 @@
-<template>
-  <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <p>
-          Gemaakt met <span class="fa fa-heart heart"></span> door <a class="is-dark name" :href="email" v-html="name"></a>
-        </p>
-      </div>
-    </div>
-  </footer>
+<template lang="pug">
+  footer.footer
+    .container
+      .content.has-text-centered
+        p
+          | Gemaakt met
+          |
+          span.fa.fa-heart.heart
+          |
+          | door
+          |
+          a.is-dark.name(:href='email', v-html='name')
 </template>
 
 <script>
@@ -33,6 +35,6 @@
   }
 
   .name {
-    color: $grey-dark
+    color: $grey-dark;
   }
 </style>
