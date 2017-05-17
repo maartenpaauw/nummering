@@ -1,10 +1,8 @@
-<template>
-  <div class="field">
-    <label class="label" v-html="label"></label>
-    <p class="control">
-      <input class="input" :type="type" :placeholder="placeholder" :value="value" @input="change" />
-    </p>
-  </div>
+<template lang="pug">
+  .field
+    label.label(v-html='label')
+    p.control
+      input.input(:type='type', :placeholder='placeholder', :value='value', @input='change')
 </template>
 
 <script>

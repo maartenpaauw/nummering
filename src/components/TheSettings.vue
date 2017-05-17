@@ -1,26 +1,14 @@
-<template>
-  <div class="card">
-    <header class="card-header">
-      <p class="card-header-title">
-        Instellingen
-      </p>
-    </header>
-    <div class="card-content">
-      <div class="content">
-        <the-setting v-for="(setting, index) in settings"
-                     :key="index"
-                     :label="setting.label"
-                     :type="setting.type"
-                     :placeholder="setting.placeholder"
-                     :setting="index"
-        ></the-setting>
-      </div>
-    </div>
-    <footer class="card-footer">
-      <a class="card-footer-item" @click="download()">Download</a>
-      <a class="card-footer-item is-danger" @click="reset()">Resetten</a>
-    </footer>
-  </div>
+<template lang="pug">
+  .card
+    header.card-header
+      p.card-header-title
+        | Instellingen
+    .card-content
+      .content
+        the-setting(v-for='(setting, index) in settings', :key='index', :label='setting.label', :type='setting.type', :placeholder='setting.placeholder', :setting='index')
+    footer.card-footer
+      a.card-footer-item(@click='download()') Download
+      a.card-footer-item.is-danger(@click='reset()') Resetten
 </template>
 
 <script>

@@ -1,7 +1,6 @@
-<template>
-  <tr>
-    <td v-html="number"></td>
-  </tr>
+<template lang="pug">
+  tr
+    td(v-html='number')
 </template>
 
 <script>
@@ -11,7 +10,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped="scoped">
   td {
     font-family: monospace;
   }

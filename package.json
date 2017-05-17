@@ -94,6 +94,8 @@
     "ora": "1.2.0",
     "phantomjs-prebuilt": "2.1.14",
     "pre-commit": "1.2.2",
+    "pug": "^2.0.0-rc.1",
+    "pug-lint-vue": "^0.1.3",
     "rimraf": "2.6.0",
     "sass-loader": "6.0.5",
     "selenium-server": "3.0.1",
@@ -127,6 +129,7 @@
     "*.js": "eslint",
     "*.vue": [
       "eslint",
+      "pug-lint-vue",
       "stylelint --syntax scss"
     ]
   },
@@ -135,6 +138,9 @@
     "processors": [
       "stylelint-processor-html"
     ],
-    "extends": "stylelint-config-standard"
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "no-empty-source":  null
+    }
   }
 }

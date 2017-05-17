@@ -1,7 +1,6 @@
-<template>
-  <tr>
-    <th v-html="header"></th>
-  </tr>
+<template lang="pug">
+  tr
+    th(v-html='header')
 </template>
 
 <script>
@@ -16,7 +15,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-
-</style>
