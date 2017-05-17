@@ -1,6 +1,6 @@
 <template lang="pug">
   nav.nav
-    span.nav-toggle(@click='menu()')
+    span.nav-toggle(@click='menu()', v-bind:class="{ 'is-active': is_active }")
       span
       span
       span
