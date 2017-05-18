@@ -1,25 +1,34 @@
 <template lang="pug">
   nav.nav
-    span.nav-toggle(@click='menu()', v-bind:class="{ 'is-active': is_active }")
+    span.nav-toggle(@click="toggle", v-bind:class="{ 'is-active': menu }")
       span
       span
       span
-    .nav-menu.nav-right(v-bind:class="{ 'is-active': is_active }")
-      a.nav-item
-        | About
+    .nav-menu.nav-right(v-bind:class="{ 'is-active': menu }")
+      a.nav-item(@click="showAbout") Dit project
 </template>
 
 <script>
+  import {mapGetters} from 'vuex'
+
   export default {
     'name': 'the-menu',
-    data () {
-      return {
-        is_active: false
-      }
+    computed: {
+      ...mapGetters([
+        'menu',
+        'about'
+      ])
     },
     methods: {
-      menu () {
-        this.is_active = !this.is_active
+      toggle () {
+        this.$store.dispatch('toggleMenu', {
+          value: !this.menu
+        })
+      },
+      showAbout () {
+        this.$store.dispatch('toggleAbout', {
+          value: !this.about
+        })
       }
     }
   }

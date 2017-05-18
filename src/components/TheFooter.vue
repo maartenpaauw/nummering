@@ -3,13 +3,11 @@
     .container
       .content.has-text-centered
         p
-          | Gemaakt met
-          |
+          | Gemaakt met #{" "}
           span.fa.fa-heart.heart
-          |
-          | door
-          |
-          a.is-dark.name(:href='email', v-html='name')
+          | #{" "} door #{" "}
+          a.is-dark.name(:href="email",
+                         v-html="name")
 </template>
 
 <script>
@@ -26,7 +24,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped="scoped">
   @import "../../node_modules/bulma/sass/utilities/variables";
 
   .heart {

@@ -2,6 +2,7 @@
   #app
     the-header
     the-menu
+    the-about
     the-hero
     section.section
       .container
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+  import TheAbout from '@/components/TheAbout'
   import TheFooter from '@/components/TheFooter'
   import TheHeader from '@/components/TheHeader'
   import TheHero from '@/components/TheHero'
@@ -18,6 +20,7 @@
   export default {
     name: 'app',
     components: {
+      TheAbout,
       TheFooter,
       TheHeader,
       TheHero,

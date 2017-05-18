@@ -1,7 +1,9 @@
 <template lang="pug">
   .nav
     .nav-center
-      a.nav-item(:href='github', target='_blank', :title='title')
+      a.nav-item(:href="github",
+                 target="_blank",
+                 :title="title")
         span.icon
           i.fa.fa-github
 </template>

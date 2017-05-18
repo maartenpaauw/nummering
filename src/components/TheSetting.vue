@@ -1,8 +1,11 @@
 <template lang="pug">
   .field
-    label.label(v-html='label')
+    label.label(v-html="label")
     p.control
-      input.input(:type='type', :placeholder='placeholder', :value='value', @input='change')
+      input.input(:type="type",
+                  :placeholder="placeholder",
+                  :value="value",
+                  @input="change")
 </template>
 
 <script>
@@ -31,7 +34,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-
-</style>
