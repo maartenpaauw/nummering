@@ -2,8 +2,8 @@ import _ from 'lodash'
 import addZero from 'add-zero'
 
 export const getters = {
-  file_name: state => {
-    return state.settings.file_name.value
+  filename: state => {
+    return state.settings.filename.value
   },
   header: state => {
     return state.settings.header.value

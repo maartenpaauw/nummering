@@ -74,7 +74,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       ),
       minimize: true,
       purifyOptions: {
-        whitelist: []
+        whitelist: ['*columns*']
       }
     }),
     // generate dist index.html with correct asset hash for caching.
@@ -84,7 +84,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       filename: process.env.NODE_ENV === 'testing'
         ? 'index.html'
         : config.build.index,
-      template: 'index.html',
+      template: 'index.pug',
       inject: true,
       minify: {
         removeComments: true,
@@ -126,7 +126,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     ]),
     new webpack.NoEmitOnErrorsPlugin(),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, '../static/favicon.png'),
+      logo: path.resolve(__dirname, '../src/assets/favicon.png'),
       appName: "Nummering",
       appDescription: "Een gemakkelijke data merge tool voor In Design",
       developerName: "Maarten Paauw",
@@ -139,7 +139,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       online: false,
       preferOnline: false,
       start_url: "/",
-      prefix: "icons/",
+      prefix: "static/icons/",
       emitStats: false,
       persistentCache: true,
       inject: true,
