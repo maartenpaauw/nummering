@@ -126,7 +126,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     ]),
     new webpack.NoEmitOnErrorsPlugin(),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, '../static/favicon.png'),
+      logo: path.resolve(__dirname, '../src/assets/favicon.png'),
       appName: "Nummering",
       appDescription: "Een gemakkelijke data merge tool voor In Design",
       developerName: "Maarten Paauw",
@@ -139,7 +139,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       online: false,
       preferOnline: false,
       start_url: "/",
-      prefix: "icons/",
+      prefix: "static/icons/",
       emitStats: false,
       persistentCache: true,
       inject: true,
