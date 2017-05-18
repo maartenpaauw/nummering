@@ -9,13 +9,15 @@
           thead
             the-example-header
           tbody
-            the-example-number(v-for='(number, index) in range', :key='index', :number='number')
+            the-example-number(v-for="(number, index) in range",
+                               :key="index",
+                               :number="number")
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   import TheExampleHeader from '@/components/TheExampleHeader'
   import TheExampleNumber from '@/components/TheExampleNumber'
-  import { mapGetters } from 'vuex'
 
   export default {
     name: 'the-example',

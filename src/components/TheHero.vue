@@ -2,8 +2,8 @@
   section.hero.is-medium.is-primary.is-bold
     .hero-body
       .container
-        h1.title.is-2(v-html='title')
-        h2.subtitle(v-html='subtitle')
+        h1.title.is-2(v-html="title")
+        h2.subtitle(v-html="subtitle")
 </template>
 
 <script>
@@ -27,10 +27,11 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped="scoped">
   .title,
   .subtitle {
     text-align: center;
+    line-height: 2.25rem;
   }
 
   .subtitle {

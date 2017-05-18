@@ -5,26 +5,30 @@
         | Instellingen
     .card-content
       .content
-        the-setting(v-for='(setting, index) in settings', :key='index', :label='setting.label', :type='setting.type', :placeholder='setting.placeholder', :setting='index')
+        the-setting(v-for="(setting, index) in settings",
+                    :key="index",
+                    :label="setting.label",
+                    :type="setting.type",
+                    :placeholder="setting.placeholder",
+                    :setting="index")
     footer.card-footer
-      a.card-footer-item(@click='download()') Download
-      a.card-footer-item.is-danger(@click='reset()') Resetten
+      a.card-footer-item(@click="download") Download
+      a.card-footer-item.is-danger(@click="reset") Resetten
 </template>
 
 <script>
-  import {defaultState} from '../store/state'
-  import TheSetting from '@/components/TheSetting'
+  import { mapGetters } from 'vuex'
   import _ from 'lodash'
+  import TheSetting from '@/components/TheSetting'
+  import { defaultState } from '../store/state'
 
   export default {
     name: 'the-settings',
     computed: {
-      file_name () {
-        return this.$store.getters.file_name
-      },
-      settings () {
-        return this.$store.state.settings
-      }
+      ...mapGetters([
+        'file_name',
+        'settings'
+      ])
     },
     components: {
       TheSetting
@@ -50,17 +54,15 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped="scoped">
   @import "../../node_modules/bulma/sass/utilities/variables";
 
   .card-footer-item {
     &.is-danger {
-      background-color: $red;
-      color: $white;
-      border: none;
+      color: $red;
 
       &:hover {
-        color: $light;
+        color: $grey-dark;
       }
     }
   }

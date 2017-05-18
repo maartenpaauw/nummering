@@ -1,6 +1,6 @@
 <template lang="pug">
   tr
-    td(v-html='number')
+    td(v-html="number")
 </template>
 
 <script>
