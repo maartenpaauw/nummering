@@ -1,4 +1,5 @@
 var path = require('path')
+var glob = require('glob')
 var utils = require('./utils')
 var webpack = require('webpack')
 var config = require('../config')
@@ -8,6 +9,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+var PurifyCSSPlugin = require('purifycss-webpack')
 
 var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -32,10 +34,27 @@ var webpackConfig = merge(baseWebpackConfig, {
       'process.env': env
     }),
     new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
+      output: {
+        comments: false
       },
-      sourceMap: true
+      mangle: {
+        keep_fnames: true,
+        screw_ie8: true
+      },
+      compress: {
+        warnings : false,
+        conditionals: true,
+        unused: true,
+        comparisons: true,
+        sequences: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        negate_iife: false,
+        screw_ie8: true
+      },
+      sourceMap: false
     }),
     // extract css into its own file
     new ExtractTextPlugin({
@@ -46,6 +65,15 @@ var webpackConfig = merge(baseWebpackConfig, {
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
         safe: true
+      }
+    }),
+    new PurifyCSSPlugin({
+      paths: glob.sync(
+        path.join(process.cwd(), "src/**/*.vue")
+      ),
+      minimize: true,
+      purifyOptions: {
+        whitelist: []
       }
     }),
     // generate dist index.html with correct asset hash for caching.
@@ -94,7 +122,8 @@ var webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    new webpack.NoEmitOnErrorsPlugin()
   ]
 })
 
