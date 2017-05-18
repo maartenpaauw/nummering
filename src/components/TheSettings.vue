@@ -21,13 +21,16 @@
   import _ from 'lodash'
   import TheSetting from '@/components/TheSetting'
   import { defaultState } from '../store/state'
+  import stream from '../stream/index'
 
   export default {
     name: 'the-settings',
     computed: {
       ...mapGetters([
         'filename',
-        'settings'
+        'settings',
+        'header',
+        'range'
       ])
     },
     components: {
@@ -43,12 +46,7 @@
         })
       },
       download () {
-        const link = document.createElement('a')
-        document.body.appendChild(link)
-        link.download = this.filename
-        link.href = `data:application/octet-stream,${encodeURIComponent(this.$store.getters.header + '\r\n')}${encodeURIComponent(this.$store.getters.range.join('\r\n'))}`
-        link.click()
-        document.body.removeChild(link)
+        stream(this.range, this.header, this.filename)
       }
     }
   }
