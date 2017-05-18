@@ -74,7 +74,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       ),
       minimize: true,
       purifyOptions: {
-        whitelist: []
+        whitelist: ['*columns*']
       }
     }),
     // generate dist index.html with correct asset hash for caching.
