@@ -26,7 +26,7 @@
     name: 'the-settings',
     computed: {
       ...mapGetters([
-        'file_name',
+        'filename',
         'settings'
       ])
     },
@@ -45,7 +45,7 @@
       download () {
         const link = document.createElement('a')
         document.body.appendChild(link)
-        link.download = this.file_name
+        link.download = this.filename
         link.href = `data:application/octet-stream,${encodeURIComponent(this.$store.getters.header + '\r\n')}${encodeURIComponent(this.$store.getters.range.join('\r\n'))}`
         link.click()
         document.body.removeChild(link)

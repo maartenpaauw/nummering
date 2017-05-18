@@ -1,5 +1,5 @@
 export const defaultState = {
-  file_name: 'reeks.csv',
+  filename: 'reeks.csv',
   header: 'Nummer',
   start: 1,
   end: 10,
@@ -10,11 +10,11 @@ export const defaultState = {
 }
 
 const settings = {
-  file_name: {
+  filename: {
     label: 'Bestandsnaam',
     type: 'text',
     placeholder: 'Bestandsnaam',
-    value: defaultState.file_name
+    value: defaultState.filename
   },
   header: {
     label: 'kolomnaam',
