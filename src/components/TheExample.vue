@@ -32,3 +32,9 @@
     }
   }
 </script>
+
+<style lang="scss" scoped="scoped">
+  table {
+    margin-bottom: 0;
+  }
+</style>
