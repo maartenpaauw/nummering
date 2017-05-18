@@ -10,6 +10,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var PurifyCSSPlugin = require('purifycss-webpack')
+var FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -123,7 +124,39 @@ var webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new FaviconsWebpackPlugin({
+      logo: path.resolve(__dirname, '../static/favicon.png'),
+      appName: "Nummering",
+      appDescription: "Een gemakkelijke data merge tool voor In Design",
+      developerName: "Maarten Paauw",
+      developerURL: "https://www.maartenpaauw.com/",
+      background: "#00d1b2",
+      theme_color: "#00d1b2",
+      display: "standalone",
+      version: "1.0",
+      logging: false,
+      online: false,
+      preferOnline: false,
+      start_url: "/",
+      prefix: "icons/",
+      emitStats: false,
+      persistentCache: true,
+      inject: true,
+      title: "Nummering",
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        opengraph: true,
+        twitter: true,
+        yandex: true,
+        windows: true
+      }
+    })
   ]
 })
 
