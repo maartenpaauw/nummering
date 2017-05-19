@@ -1,5 +1,4 @@
-import _ from 'lodash'
-import addZero from 'add-zero'
+import generate from '../range'
 
 export const getters = {
   filename: state => {
@@ -27,9 +26,14 @@ export const getters = {
     return state.settings.leading_zeros.value
   },
   range: state => {
-    return _.map(_.range(state.settings.start.value, (state.settings.end.value + 1), state.settings.step.value), (number) => {
-      return `${state.settings.prefix.value}${addZero(number, state.settings.leading_zeros.value)}${state.settings.suffix.value}`.trim()
-    })
+    return generate(
+      state.settings.start.value,
+      state.settings.end.value,
+      state.settings.step.value,
+      state.settings.prefix.value,
+      state.settings.leading_zeros.value,
+      state.settings.suffix.value
+    )
   },
   settings: state => {
     return state.settings
