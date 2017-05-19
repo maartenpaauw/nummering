@@ -1,5 +1,5 @@
 <template lang="pug">
-  .nav
+  nav.nav
     .nav-center
       a.nav-item(:href="github",
                  target="_blank",

@@ -35,7 +35,9 @@
 </script>
 
 <style lang="scss" scoped="scoped">
+  @import "../../node_modules/bulma/sass/utilities/variables";
+
   .nav {
-    background-color: whitesmoke;
+    background-color: $white-ter;
   }
 </style>
