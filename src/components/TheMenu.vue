@@ -5,7 +5,10 @@
       span
       span
     .nav-menu.nav-right(v-bind:class="{ 'is-active': menu }")
-      a.nav-item(@click="showAbout") Dit project
+      a.nav-item(@click="showAbout")
+        span.is-hidden-tablet Over ons
+        span.icon.is-hidden-mobile
+          i.fa.fa-question-circle
 </template>
 
 <script>
@@ -39,5 +42,13 @@
 
   .nav {
     background-color: $white-ter;
+
+    .nav-item {
+      text-transform: uppercase;
+    }
+
+    .icon {
+      color: $grey-lighter;
+    }
   }
 </style>

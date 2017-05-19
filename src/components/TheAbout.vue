@@ -3,11 +3,9 @@
     .modal-background(@click="toggle")
     .modal-content
       .card
-        header.card-header
-          p.card-header-title Dit project
         .card-content
           .content
-            p Volgt binnenkort.
+            p Binnenkort
     button.modal-close(@click="toggle")
 </template>
 
@@ -30,3 +28,10 @@
     }
   }
 </script>
+
+<style lang="scss" scoped="scoped">
+  .content {
+    text-align: center;
+    text-transform: uppercase;
+  }
+</style>
