@@ -1,12 +1,23 @@
 import { defaultState } from '../store/state'
 
 export default function stream (range, header = defaultState.header, filename = defaultState.filename) {
-  let link = document.createElement('a')
-  document.body.appendChild(link)
-  link.download = filename
-  link.href = `data:application/octet-stream,
-               ${encodeURIComponent(header + '\r\n')}
-               ${encodeURIComponent(range.join('\r\n'))}`
-  link.click()
-  document.body.removeChild(link)
+  const data = []
+  const a = document.createElement('a')
+  const properties = {
+    'Content-Type': 'text/csv',
+    'charset': 'UTF-8'
+  }
+  let file
+  data.push(header + '\r\n')
+  data.push(range.join('\r\n'))
+  try {
+    file = new File(data, filename, properties)
+  } catch (e) {
+    file = new Blob(data, properties)
+  }
+  document.body.appendChild(a)
+  a.setAttribute('href', window.URL.createObjectURL(file))
+  a.setAttribute('download', filename)
+  a.click()
+  document.body.removeChild(a)
 }
