@@ -9,7 +9,7 @@
           thead
             the-example-header
           tbody
-            the-example-number(v-for="(number, index) in range",
+            the-example-number(v-for="(number, index) in demo_range",
                                :key="index",
                                :number="number")
 </template>
@@ -27,7 +27,7 @@
     },
     computed: {
       ...mapGetters([
-        'range'
+        'demo_range'
       ])
     }
   }

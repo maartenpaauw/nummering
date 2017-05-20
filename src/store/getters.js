@@ -1,4 +1,4 @@
-import generate from '../range'
+import { generate, generateDemoRange } from '../range'
 
 export const getters = {
   filename: state => {
@@ -33,6 +33,12 @@ export const getters = {
       state.settings.prefix.value,
       state.settings.leading_zeros.value,
       state.settings.suffix.value
+    )
+  },
+  demo_range: (state, getters) => {
+    return generateDemoRange(
+      getters.range.length,
+      getters.range
     )
   },
   settings: state => {
