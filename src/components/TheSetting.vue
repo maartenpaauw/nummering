@@ -5,7 +5,8 @@
       input.input(:type="type",
                   :placeholder="placeholder",
                   :value="value",
-                  @input="change")
+                  @input="change",
+                  :min="min()")
 </template>
 
 <script>
@@ -30,6 +31,9 @@
         } else {
           return value
         }
+      },
+      min () {
+        return (this.type === 'number') ? 0 : false
       }
     }
   }

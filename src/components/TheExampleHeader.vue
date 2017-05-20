@@ -1,6 +1,6 @@
 <template lang="pug">
   tr
-    th(v-html="header")
+    th {{ header }}
 </template>
 
 <script>
