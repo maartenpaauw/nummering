@@ -1,9 +1,16 @@
 import _ from 'lodash'
-import addZero from 'add-zero'
+
+function padding (number, size) {
+  let s = String(number)
+  while (s.length < size + 1) {
+    s = '0' + s
+  }
+  return s
+}
 
 export function generate (start, end, step, prefix, leadingZeros, suffix) {
   return _.map(_.range(start, (end + 1), step), (number) => {
-    return `${prefix}${addZero(number, leadingZeros + 1)}${suffix}`.trim()
+    return `${prefix}${padding(number, leadingZeros)}${suffix}`.trim()
   })
 }
 
