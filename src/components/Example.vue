@@ -1,8 +1,7 @@
 <template lang="pug">
   .card
     header.card-header
-      p.card-header-title
-        | Voorbeeld
+      p.card-header-title(v-html="header")
     .card-content
       .content
         table.table.is-bordered.is-striped
@@ -28,7 +27,10 @@
     computed: {
       ...mapGetters([
         'demo_range'
-      ])
+      ]),
+      header () {
+        return this.$t('example.header')
+      }
     }
   }
 </script>

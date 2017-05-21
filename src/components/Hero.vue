@@ -7,21 +7,14 @@
 </template>
 
 <script>
-  import * as npm from '../../package.json'
-  import _ from 'lodash'
-
   export default {
     name: 'v-hero',
     computed: {
       title () {
-        return _.upperFirst(npm.name)
+        return this.$t('hero.title')
       },
       subtitle () {
-        let description = `${npm.description}.`
-        _.forEach(npm.keywords, (keyword) => {
-          description = _.replace(description, keyword, `<span class="tag is-white is-medium">${keyword}</span>`)
-        })
-        return description
+        return this.$t('hero.subtitle')
       }
     }
   }

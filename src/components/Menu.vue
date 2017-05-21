@@ -6,13 +6,13 @@
       span
     .nav-menu.nav-right(v-bind:class="{ 'is-active': menu }")
       a.nav-item(@click="showAbout")
-        span.is-hidden-tablet Over ons
+        span.is-hidden-tablet(v-html="aboutUs")
         span.icon.is-hidden-mobile
           i.fa.fa-question-circle
 </template>
 
 <script>
-  import {mapGetters} from 'vuex'
+  import { mapGetters } from 'vuex'
 
   export default {
     'name': 'v-menu',
@@ -20,7 +20,10 @@
       ...mapGetters([
         'menu',
         'about'
-      ])
+      ]),
+      aboutUs () {
+        return this.$t('menu.about_us')
+      }
     },
     methods: {
       toggle () {
@@ -42,10 +45,6 @@
 
   .nav {
     background-color: $white-ter;
-
-    .nav-item {
-      text-transform: uppercase;
-    }
 
     .icon {
       color: $grey-lighter;
