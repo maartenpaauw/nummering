@@ -1,5 +1,5 @@
 <template lang="pug">
-  .modal(v-bind:class="{ 'is-active': about }")
+  .modal(:class="{ 'is-active': about }")
     .modal-background(@click="toggle")
     .modal-content
       .card
