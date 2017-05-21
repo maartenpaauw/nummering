@@ -1,10 +1,10 @@
 <template lang="pug">
   nav.nav
-    span.nav-toggle(@click="toggle", v-bind:class="{ 'is-active': menu }")
+    span.nav-toggle(@click="toggle", :class="{ 'is-active': menu }")
       span
       span
       span
-    .nav-menu.nav-right(v-bind:class="{ 'is-active': menu }")
+    .nav-menu.nav-right(:class="{ 'is-active': menu }")
       a.nav-item(@click="showAbout")
         span.is-hidden-tablet(v-html="aboutUs")
         span.icon.is-hidden-mobile
