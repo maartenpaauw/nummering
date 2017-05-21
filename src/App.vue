@@ -1,30 +1,30 @@
 <template lang="pug">
   #app
-    the-header
-    the-menu
-    the-about
-    the-hero
+    v-header
+    v-menu
+    v-about
+    v-hero
     section.section
       .container
         router-view
-    the-footer
+    v-footer
 </template>
 
 <script>
-  import TheAbout from '@/components/TheAbout'
-  import TheFooter from '@/components/TheFooter'
-  import TheHeader from '@/components/TheHeader'
-  import TheHero from '@/components/TheHero'
-  import TheMenu from '@/components/TheMenu'
+  import About from '@/components/About'
+  import Footer from '@/components/Footer'
+  import Header from '@/components/Header'
+  import Hero from '@/components/Hero'
+  import Menu from '@/components/Menu'
 
   export default {
     name: 'app',
     components: {
-      TheAbout,
-      TheFooter,
-      TheHeader,
-      TheHero,
-      TheMenu
+      'v-about': About,
+      'v-footer': Footer,
+      'v-header': Header,
+      'v-hero': Hero,
+      'v-menu': Menu
     }
   }
 </script>

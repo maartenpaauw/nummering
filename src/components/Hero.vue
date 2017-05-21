@@ -11,7 +11,7 @@
   import _ from 'lodash'
 
   export default {
-    name: 'the-hero',
+    name: 'v-hero',
     computed: {
       title () {
         return _.upperFirst(npm.name)
