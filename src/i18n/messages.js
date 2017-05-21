@@ -5,7 +5,7 @@ export const messages = {
       subtitle: 'Een gemakkelijke <span class="tag is-white is-medium">data merge</span> tool voor <span class="tag is-white is-medium">InDesign</span>.'
     },
     menu: {
-      about_us: 'Over ons'
+      about_us: 'over ons'
     },
     about: {
       body: 'binnenkort'

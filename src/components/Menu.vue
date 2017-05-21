@@ -46,10 +46,6 @@
   .nav {
     background-color: $white-ter;
 
-    .nav-item {
-      text-transform: uppercase;
-    }
-
     .icon {
       color: $grey-lighter;
     }

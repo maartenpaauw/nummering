@@ -13,9 +13,9 @@ export const values = {
   filename: 'reeks.csv',
   header: 'Nummer',
   start: 1,
-  end: 10,
+  end: 1000,
   step: 1,
   prefix: 'No. ',
   suffix: '',
-  leading_zeros: 5
+  leading_zeros: 3
 }
