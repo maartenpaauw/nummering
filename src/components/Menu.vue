@@ -15,7 +15,7 @@
   import {mapGetters} from 'vuex'
 
   export default {
-    'name': 'the-menu',
+    'name': 'v-menu',
     computed: {
       ...mapGetters([
         'menu',

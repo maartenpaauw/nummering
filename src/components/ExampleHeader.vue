@@ -7,7 +7,7 @@
   import { mapGetters } from 'vuex'
 
   export default {
-    name: 'the-example-header',
+    name: 'v-example-header',
     computed: {
       ...mapGetters([
         'header'

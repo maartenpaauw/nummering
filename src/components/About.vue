@@ -13,7 +13,7 @@
   import { mapGetters } from 'vuex'
 
   export default {
-    name: 'the-about',
+    name: 'v-about',
     computed: {
       ...mapGetters([
         'about'

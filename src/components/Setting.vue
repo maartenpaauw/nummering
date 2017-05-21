@@ -11,7 +11,7 @@
 
 <script>
   export default {
-    name: 'the-setting',
+    name: 'v-setting',
     props: ['label', 'setting', 'type', 'placeholder'],
     computed: {
       value () {

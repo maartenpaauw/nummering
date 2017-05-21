@@ -7,23 +7,23 @@
       .content
         table.table.is-bordered.is-striped
           thead
-            the-example-header
+            v-example-header
           tbody
-            the-example-number(v-for="(number, index) in demo_range",
-                               :key="index",
-                               :number="number")
+            v-example-number(v-for="(number, index) in demo_range",
+                             :key="index",
+                             :number="number")
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
-  import TheExampleHeader from '@/components/TheExampleHeader'
-  import TheExampleNumber from '@/components/TheExampleNumber'
+  import ExampleHeader from '@/components/ExampleHeader'
+  import ExampleNumber from '@/components/ExampleNumber'
 
   export default {
-    name: 'the-example',
+    name: 'v-example',
     components: {
-      TheExampleHeader,
-      TheExampleNumber
+      'v-example-header': ExampleHeader,
+      'v-example-number': ExampleNumber
     },
     computed: {
       ...mapGetters([

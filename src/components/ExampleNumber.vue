@@ -5,7 +5,7 @@
 
 <script>
   export default {
-    name: 'the-example-number',
+    name: 'v-example-number',
     props: ['number']
   }
 </script>

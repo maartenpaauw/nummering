@@ -13,7 +13,7 @@
   import _ from 'lodash'
 
   export default {
-    name: 'the-social',
+    name: 'v-header',
     computed: {
       github () {
         return npm.repository.url
