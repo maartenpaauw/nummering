@@ -1,6 +1,6 @@
-import { defaultState } from '../store/state'
+import { values } from '../settings'
 
-export default function stream (range, header = defaultState.header, filename = defaultState.filename) {
+export default function stream (range, header = values.header, filename = values.filename) {
   const data = []
   const a = document.createElement('a')
   const properties = {

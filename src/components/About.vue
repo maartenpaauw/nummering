@@ -5,7 +5,7 @@
       .card
         .card-content
           .content
-            p Binnenkort
+            p(v-html="body")
     button.modal-close(@click="toggle")
 </template>
 
@@ -17,7 +17,10 @@
     computed: {
       ...mapGetters([
         'about'
-      ])
+      ]),
+      body () {
+        return this.$t('about.body')
+      }
     },
     methods: {
       toggle () {

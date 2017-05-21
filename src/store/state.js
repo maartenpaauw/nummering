@@ -1,62 +1,29 @@
-export const defaultState = {
-  filename: 'reeks.csv',
-  header: 'Nummer',
-  start: 1,
-  end: 10,
-  step: 1,
-  prefix: 'No. ',
-  suffix: '',
-  leading_zeros: 5
-}
+import { values } from '../settings'
 
 const settings = {
   filename: {
-    label: 'Bestandsnaam',
-    type: 'text',
-    placeholder: 'Bestandsnaam',
-    value: defaultState.filename
+    value: values.filename
   },
   header: {
-    label: 'kolomnaam',
-    type: 'text',
-    placeholder: 'Kolomnaam',
-    value: defaultState.header
+    value: values.header
   },
   start: {
-    label: 'Begingetal',
-    type: 'number',
-    placeholder: 'Begingetal',
-    value: defaultState.start
+    value: values.start
   },
   end: {
-    label: 'Eindgetal',
-    type: 'number',
-    placeholder: 'Eindgetal',
-    value: defaultState.end
+    value: values.end
   },
   step: {
-    label: 'Aantal stappen',
-    type: 'number',
-    placeholder: 'Aantal stappen',
-    value: defaultState.step
+    value: values.step
   },
   prefix: {
-    label: 'Voor het getal',
-    type: 'text',
-    placeholder: 'Voor het getal',
-    value: defaultState.prefix
+    value: values.prefix
   },
   suffix: {
-    label: 'Na het getal',
-    type: 'text',
-    placeholder: 'Na het getal',
-    value: defaultState.suffix
+    value: values.suffix
   },
   leading_zeros: {
-    label: 'Leidende nullen',
-    type: 'number',
-    placeholder: 'Leidende nullen',
-    value: defaultState.leading_zeros
+    value: values.leading_zeros
   }
 }
 

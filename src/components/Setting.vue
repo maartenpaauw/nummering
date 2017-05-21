@@ -10,12 +10,23 @@
 </template>
 
 <script>
+  import { types } from '../settings'
+
   export default {
     name: 'v-setting',
-    props: ['label', 'setting', 'type', 'placeholder'],
+    props: ['setting', 'type'],
     computed: {
       value () {
         return this.$store.getters[this.setting]
+      },
+      type () {
+        return types[this.setting]
+      },
+      label () {
+        return this.$t(`settings.${this.setting}.label`)
+      },
+      placeholder () {
+        return this.$t(`settings.${this.setting}.placeholder`)
       }
     },
     methods: {

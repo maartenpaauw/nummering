@@ -10,7 +10,6 @@
 
 <script>
   import * as npm from '../../package.json'
-  import _ from 'lodash'
 
   export default {
     name: 'v-header',
@@ -19,7 +18,7 @@
         return npm.repository.url
       },
       title () {
-        return `${_.upperFirst(npm.name)} op GitHub`
+        return this.$t('header.on_github')
       }
     }
   }

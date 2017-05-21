@@ -2,12 +2,10 @@
   footer.footer
     .container
       .content.has-text-centered
-        p
-          | Gemaakt met #{" "}
+        p {{ created_with }}
           span.fa.fa-heart.heart
-          | #{" "} door #{" "}
-          a.is-dark.name(:href="email",
-                         v-html="name")
+          | {{ created_by }}
+          a.is-dark.name(:href="email", v-html="name")
 </template>
 
 <script>
@@ -19,6 +17,14 @@
       return {
         name: npm.author.name,
         email: `mailto:${npm.author.email}`
+      }
+    },
+    computed: {
+      created_with () {
+        return `${this.$t('footer.created_with')} `
+      },
+      created_by () {
+        return ` ${this.$t('footer.created_by')} `
       }
     }
   }
