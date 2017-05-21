@@ -5,7 +5,7 @@
         p {{ created_with }}
           span.fa.fa-heart.heart
           | {{ created_by }}
-          a.is-dark.name(:href="email", v-html="name") 
+          a.is-dark.name(:href="email", v-html="name")
 </template>
 
 <script>
