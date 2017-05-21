@@ -10,7 +10,7 @@
 
 <script>
   import * as npm from '../../package.json'
-
+  
   export default {
     name: 'v-header',
     computed: {
