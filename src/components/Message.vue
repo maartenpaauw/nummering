@@ -16,7 +16,7 @@
   import * as npm from '../../package.json'
 
   export default {
-    name: 'the-message',
+    name: 'v-message',
     computed: {
       ...mapGetters([
         'message'

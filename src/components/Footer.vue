@@ -14,7 +14,7 @@
   import * as npm from '../../package.json'
 
   export default {
-    name: 'the-footer',
+    name: 'v-footer',
     data () {
       return {
         name: npm.author.name,

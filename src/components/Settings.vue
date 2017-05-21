@@ -5,12 +5,12 @@
         | Instellingen
     .card-content
       .content
-        the-setting(v-for="(setting, index) in settings",
-                    :key="index",
-                    :label="setting.label",
-                    :type="setting.type",
-                    :placeholder="setting.placeholder",
-                    :setting="index")
+        v-setting(v-for="(setting, index) in settings",
+                  :key="index",
+                  :label="setting.label",
+                  :type="setting.type",
+                  :placeholder="setting.placeholder",
+                  :setting="index")
     footer.card-footer
       a.card-footer-item(@click="download") Download
       a.card-footer-item.is-danger(@click="reset") Resetten
@@ -19,12 +19,12 @@
 <script>
   import { mapGetters } from 'vuex'
   import _ from 'lodash'
-  import TheSetting from '@/components/TheSetting'
+  import Setting from '@/components/Setting'
   import { defaultState } from '../store/state'
   import stream from '../stream/index'
 
   export default {
-    name: 'the-settings',
+    name: 'v-settings',
     computed: {
       ...mapGetters([
         'filename',
@@ -34,7 +34,7 @@
       ])
     },
     components: {
-      TheSetting
+      'v-setting': Setting
     },
     methods: {
       reset () {
