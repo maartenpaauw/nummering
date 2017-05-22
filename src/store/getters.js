@@ -35,10 +35,14 @@ export const getters = {
       state.settings.suffix
     )
   },
-  demo_range: (state, getters) => {
+  demo_range: state => {
     return generateDemoRange(
-      getters.range.length,
-      getters.range
+      state.settings.start,
+      state.settings.end,
+      state.settings.step,
+      state.settings.prefix,
+      state.settings.leading_zeros,
+      state.settings.suffix
     )
   },
   settings: state => {
