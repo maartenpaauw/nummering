@@ -14,12 +14,13 @@ export function generate (start, end, step, prefix, leadingZeros, suffix) {
   })
 }
 
-export function generateDemoRange (length, range) {
-  if (length < 51) {
-    return range
+export function generateDemoRange (start, end, step, prefix, leadingZeros, suffix) {
+  const numbers = (end - start) / step
+  if (numbers < 50) {
+    return generate(start, end, step, prefix, leadingZeros, suffix)
   } else {
-    return range.slice(0, 25)
+    return generate(start, start + (24 * step), step, prefix, leadingZeros, suffix)
       .concat(['...'])
-      .concat(range.slice(length - 25, length))
+      .concat(generate(end - (24 * step), end, step, prefix, leadingZeros, suffix))
   }
 }
