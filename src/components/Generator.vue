@@ -2,12 +2,14 @@
   .columns
     .column.is-8.is-offset-2
       .columns
-        .column
+        .column.is-12
           v-message
       .columns
-        .column
-          v-settings
-        .column
+        .column.is-6
+          .columns
+            .column.is-12
+              v-settings
+        .column.is-6
           v-example
 </template>
 
