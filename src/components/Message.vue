@@ -2,7 +2,7 @@
   article.message.is-warning(v-show="message")
     .message-header
       p(v-html="title")
-      button.delete(@click="hide")
+      button.delete(@click="toggle")
     .message-body(v-html="body")
 </template>
 
@@ -23,9 +23,9 @@
       }
     },
     methods: {
-      hide () {
+      toggle () {
         this.$store.dispatch('toggleMessage', {
-          value: false
+          value: !this.message
         })
       }
     }
