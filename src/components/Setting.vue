@@ -37,11 +37,7 @@
         })
       },
       getValue (value) {
-        if (this.type === 'number') {
-          return parseInt(value)
-        } else {
-          return value
-        }
+        return this.type === 'number' ? parseInt(value) : value
       },
       min () {
         return (this.type === 'number') ? 0 : false
