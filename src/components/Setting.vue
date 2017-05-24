@@ -6,7 +6,7 @@
                   :placeholder="placeholder",
                   :value="value",
                   @input="change",
-                  :min="min()")
+                  :min="min")
 </template>
 
 <script>
@@ -27,6 +27,9 @@
       },
       placeholder () {
         return this.$t(`settings.${this.setting}.placeholder`)
+      },
+      min () {
+        return (this.type === 'number') ? 0 : false
       }
     },
     methods: {
@@ -38,9 +41,6 @@
       },
       getValue (value) {
         return this.type === 'number' ? parseInt(value) : value
-      },
-      min () {
-        return (this.type === 'number') ? 0 : false
       }
     }
   }
