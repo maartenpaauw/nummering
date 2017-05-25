@@ -25,6 +25,13 @@
       'v-header': Header,
       'v-hero': Hero,
       'v-menu': Menu
+    },
+    mounted () {
+      /* eslint-disable no-undef */
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: 'ca-pub-7764800584863746',
+        enable_page_level_ads: true
+      })
     }
   }
 </script>
