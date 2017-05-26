@@ -4,7 +4,7 @@
       .container
         h1.title.is-1(v-html="title")
         h2.subtitle.is-3(v-html="subtitle")
-        router-link(to="/", v-html="link")
+        router-link(:to="to", v-html="link")
 </template>
 
 <script>
@@ -19,6 +19,9 @@
       },
       link () {
         return this.$t('not_found.link')
+      },
+      to () {
+        return { name: 'generator' }
       }
     }
   }
