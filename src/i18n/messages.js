@@ -60,6 +60,11 @@ export const messages = {
         label: 'Leidende nullen',
         placeholder: '@:settings.leading_zeros.label'
       }
+    },
+    not_found: {
+      title: '404',
+      subtitle: 'Pagina niet gevonden...',
+      link: 'Breng mij terug naar de homepagina.'
     }
   }
 }
