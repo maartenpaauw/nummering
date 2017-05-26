@@ -48,12 +48,6 @@ export const getters = {
   settings: state => {
     return state.settings
   },
-  menu: state => {
-    return state.visible.menu
-  },
-  about: state => {
-    return state.visible.about
-  },
   message: state => {
     return state.visible.message
   }

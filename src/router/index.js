@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import About from '@/components/About'
 import Generator from '@/components/Generator'
 import NotFound from '@/components/NotFound'
 
@@ -14,8 +15,13 @@ export default new Router({
       component: Generator
     },
     {
+      path: '/deze-tool',
+      name: 'about',
+      component: About
+    },
+    {
       path: '*',
-      name: 'notFound',
+      name: 'not_found',
       component: NotFound
     }
   ]

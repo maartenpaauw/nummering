@@ -1,8 +1,5 @@
 <template lang="pug">
   #app
-    v-header
-    v-menu
-    v-about
     v-hero
     section.section
       .container
@@ -11,20 +8,14 @@
 </template>
 
 <script>
-  import About from '@/components/About'
   import Footer from '@/components/Footer'
-  import Header from '@/components/Header'
   import Hero from '@/components/Hero'
-  import Menu from '@/components/Menu'
 
   export default {
     name: 'app',
     components: {
-      'v-about': About,
       'v-footer': Footer,
-      'v-header': Header,
-      'v-hero': Hero,
-      'v-menu': Menu
+      'v-hero': Hero
     },
     mounted () {
       /* eslint-disable no-undef */

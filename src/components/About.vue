@@ -1,40 +1,27 @@
 <template lang="pug">
-  .modal(:class="{ 'is-active': about }")
-    .modal-background(@click="toggle")
-    .modal-content
-      .card
-        .card-content
-          .content
-            p(v-html="body")
-    button.modal-close(@click="toggle")
+  .columns
+    .column.is-8.is-offset-2
+      h1.title.is-3(v-html="title")
+      p(v-html="body")
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
-
   export default {
     name: 'v-about',
     computed: {
-      ...mapGetters([
-        'about'
-      ]),
+      title () {
+        return this.$t('about.title')
+      },
       body () {
         return this.$t('about.body')
-      }
-    },
-    methods: {
-      toggle () {
-        this.$store.dispatch('toggleAbout', {
-          value: !this.about
-        })
       }
     }
   }
 </script>
 
 <style lang="scss" scoped="scoped">
-  .content {
-    text-align: center;
-    text-transform: uppercase;
+  p {
+    text-align: justify;
+    line-height: 2rem;
   }
 </style>
