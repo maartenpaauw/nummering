@@ -2,13 +2,15 @@ export const messages = {
   nl: {
     hero: {
       title: 'Nummering',
-      subtitle: 'Een gemakkelijke <span class="tag is-white is-medium">data merge</span> tool voor <span class="tag is-white is-medium">InDesign</span>.'
+      subtitle: 'Een gemakkelijke <strong>data merge</strong> tool voor <strong>InDesign</strong>.'
     },
     menu: {
-      about_us: 'over ons'
+      generate: 'Genereer',
+      about: 'Deze tool'
     },
     about: {
-      body: 'binnenkort'
+      title: 'Deze tool',
+      body: 'Binnenkort...'
     },
     example: {
       header: 'Voorbeeld'
@@ -63,7 +65,7 @@ export const messages = {
     },
     not_found: {
       title: '404',
-      subtitle: 'Pagina niet gevonden...',
+      subtitle: 'Pagina niet gevonden',
       link: 'Breng mij terug naar de homepagina.'
     }
   }

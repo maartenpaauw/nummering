@@ -5,8 +5,6 @@ const settings = {
 }
 
 const visible = {
-  menu: false,
-  about: false,
   message: true
 }
 
