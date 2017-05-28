@@ -1,7 +1,7 @@
 <template lang="pug">
   .card
     header.card-header
-      p.card-header-title(v-html="title")
+      h3.card-header-title(v-html="title")
     .card-content
       .content
         v-setting(v-for="(setting, index) in settings",

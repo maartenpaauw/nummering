@@ -30,3 +30,9 @@
     }
   }
 </script>
+
+<style lang="scss" scoped="scoped">
+  .hero-foot {
+    margin-top: 1.5rem;
+  }
+</style>

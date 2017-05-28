@@ -1,8 +1,12 @@
 <template lang="pug">
   .columns
     .column.is-8.is-offset-2
-      h1.title.is-3(v-html="title")
-      p(v-html="body")
+      .card
+        header.card-header
+          h3.card-header-title(v-html="title")
+        .card-content
+          .content
+            p(v-html="body")
 </template>
 
 <script>
@@ -20,8 +24,10 @@
 </script>
 
 <style lang="scss" scoped="scoped">
-  p {
-    text-align: justify;
-    line-height: 2rem;
+  .content {
+    p {
+      text-align: justify;
+      line-height: 2rem;
+    }
   }
 </style>
