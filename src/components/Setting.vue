@@ -14,7 +14,7 @@
 
   export default {
     name: 'v-setting',
-    props: ['setting', 'type'],
+    props: ['setting'],
     computed: {
       value () {
         return this.$store.getters[this.setting]
