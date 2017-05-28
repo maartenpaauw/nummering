@@ -8,19 +8,19 @@ function padding (number, size) {
   return s
 }
 
-export function generate (start, end, step, prefix, leadingZeros, suffix) {
-  return _.map(_.range(start, (end + 1), step), (number) => {
-    return `${prefix}${padding(number, leadingZeros)}${suffix}`.trim()
+export function generate (settings, start = settings.start, end = settings.end) {
+  return _.map(_.range(start, (end + 1), settings.step), (number) => {
+    return `${settings.prefix}${padding(number, settings.leading_zeros)}${settings.suffix}`.trim()
   })
 }
 
-export function generateDemoRange (start, end, step, prefix, leadingZeros, suffix) {
-  const numbers = (end - start) / step
+export function generateDemoRange (settings) {
+  const numbers = (settings.end - settings.start) / settings.step
   if (numbers < 50) {
-    return generate(start, end, step, prefix, leadingZeros, suffix)
+    return generate(settings)
   } else {
-    return generate(start, start + (24 * step), step, prefix, leadingZeros, suffix)
+    return generate(settings, settings.start, settings.start + (24 * settings.step))
       .concat(['...'])
-      .concat(generate(end - (24 * step), end, step, prefix, leadingZeros, suffix))
+      .concat(generate(settings, settings.end - (24 * settings.step)))
   }
 }
