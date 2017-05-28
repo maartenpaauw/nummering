@@ -26,24 +26,10 @@ export const getters = {
     return state.settings.leading_zeros
   },
   range: state => {
-    return generate(
-      state.settings.start,
-      state.settings.end,
-      state.settings.step,
-      state.settings.prefix,
-      state.settings.leading_zeros,
-      state.settings.suffix
-    )
+    return generate(state.settings)
   },
   demo_range: state => {
-    return generateDemoRange(
-      state.settings.start,
-      state.settings.end,
-      state.settings.step,
-      state.settings.prefix,
-      state.settings.leading_zeros,
-      state.settings.suffix
-    )
+    return generateDemoRange(state.settings)
   },
   settings: state => {
     return state.settings
