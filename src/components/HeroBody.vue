@@ -21,9 +21,6 @@
 <style lang="scss" scoped="scoped">
   .subtitle {
     margin-top: -0.5rem !important;
-  }
-
-  .hero-body {
-    padding-bottom: 7.5rem !important;
+    line-height: 1.75rem;
   }
 </style>

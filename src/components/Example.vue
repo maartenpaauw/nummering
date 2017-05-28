@@ -1,7 +1,7 @@
 <template lang="pug">
   .card
     header.card-header
-      p.card-header-title(v-html="header")
+      h3.card-header-title(v-html="header")
     .card-content
       .content
         table.table.is-bordered.is-striped
