@@ -30,7 +30,7 @@
     "lint-staged": "lint-staged"
   },
   "dependencies": {
-    "bulma": "0.4.1",
+    "bulma": "0.4.2",
     "font-awesome": "4.7.0",
     "lodash": "4.17.4",
     "vee-validate": "2.0.0-rc.5",
