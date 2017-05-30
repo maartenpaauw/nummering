@@ -3,6 +3,7 @@ import { values } from '../settings'
 export default function stream (range, header = values.header, filename = values.filename) {
   const data = []
   const a = document.createElement('a')
+  filename = filename + '.csv'
   const properties = {
     'Content-Type': 'text/csv',
     'charset': 'UTF-8'

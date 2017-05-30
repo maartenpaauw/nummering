@@ -10,7 +10,7 @@ export const types = {
 }
 
 export const values = {
-  filename: 'reeks.csv',
+  filename: 'reeks',
   header: 'Nummer',
   start: 1,
   end: 1000,

@@ -1,12 +1,15 @@
 <template lang="pug">
-  .field
+  span
     label.label(v-html="label")
-    p.control
-      input.input(:type="type",
-                  :placeholder="placeholder",
-                  :value="value",
-                  @input="change",
-                  :min="min")
+    .field(:class="{ 'has-addons': isFilename }")
+      p.control(:class="{ 'is-expanded': isFilename }")
+        input.input(:type="type",
+                    :placeholder="placeholder",
+                    :value="value",
+                    @input="change",
+                    :min="min")
+      p.control(v-if="isFilename")
+        a.button.is-static .csv
 </template>
 
 <script>
@@ -30,6 +33,9 @@
       },
       min () {
         return (this.type === 'number') ? 0 : false
+      },
+      isFilename () {
+        return this.setting === 'filename'
       }
     },
     methods: {
@@ -45,3 +51,13 @@
     }
   }
 </script>
+
+<style lang="scss" scoped="scoped">
+  p {
+    margin-bottom: 0 !important;
+  }
+
+  input {
+    margin-bottom: 1rem;
+  }
+</style>
