@@ -6,7 +6,12 @@
 <script>
   export default {
     name: 'v-example-number',
-    props: ['number']
+    props: {
+      number: {
+        type: String,
+        required: true
+      }
+    }
   }
 </script>
 

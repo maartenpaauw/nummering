@@ -17,7 +17,12 @@
 
   export default {
     name: 'v-setting',
-    props: ['setting'],
+    props: {
+      setting: {
+        type: [String, Number],
+        required: true
+      }
+    },
     computed: {
       value () {
         return this.$store.getters[this.setting]
