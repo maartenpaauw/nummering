@@ -16,6 +16,9 @@
     components: {
       'v-footer': Footer,
       'v-hero': Hero
+    },
+    created () {
+      document.title = `${this.$t('hero.title')} — ${this.$t('hero.subtitle').replace(/<(?:.|\n)*?>/gm, '')}`
     }
   }
 </script>
@@ -23,6 +26,7 @@
 <style lang="scss">
   @import "../node_modules/bulma/bulma.sass";
   @import "../node_modules/font-awesome/css/font-awesome.min.css";
+  @import "../node_modules/animate.css/animate.min.css";
 
   * {
     &::selection {

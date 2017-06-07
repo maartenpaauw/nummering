@@ -1,5 +1,8 @@
-import { nl_NL as nl } from './languages/nl-NL'
+/* eslint-disable camelcase */
+import { nl_NL } from './languages/nl_NL'
+import { en_US } from './languages/en_US'
 
 export const messages = {
-  nl
+  nl_NL,
+  en_US
 }
