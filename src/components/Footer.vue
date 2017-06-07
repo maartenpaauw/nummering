@@ -9,14 +9,12 @@
 </template>
 
 <script>
-  import * as npm from '../../package.json'
-
   export default {
     name: 'v-footer',
     data () {
       return {
-        name: npm.author.name,
-        email: `mailto:${npm.author.email}`
+        name: 'Maarten Paauw',
+        email: `mailto:maartenpaauw@gmail.com`
       }
     },
     computed: {

@@ -11,13 +11,11 @@
 </template>
 
 <script>
-  import * as npm from '../../package.json'
-
   export default {
     name: 'v-hero-header',
     computed: {
       github () {
-        return npm.repository.url
+        return 'https://github.com/maartenpaauw/nummering'
       },
       title () {
         return this.$t('header.on_github')

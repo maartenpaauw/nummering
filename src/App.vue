@@ -23,6 +23,7 @@
 <style lang="scss">
   @import "../node_modules/bulma/bulma.sass";
   @import "../node_modules/font-awesome/css/font-awesome.min.css";
+  @import "../node_modules/animate.css/animate.min.css";
 
   * {
     &::selection {
