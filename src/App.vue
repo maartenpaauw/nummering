@@ -16,6 +16,9 @@
     components: {
       'v-footer': Footer,
       'v-hero': Hero
+    },
+    created () {
+      document.title = `${this.$t('hero.title')} — ${this.$t('hero.subtitle').replace(/<(?:.|\n)*?>/gm, '')}`
     }
   }
 </script>
