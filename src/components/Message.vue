@@ -1,11 +1,11 @@
 <template lang="pug">
-  transition(enter-active-class="animated fadeIn",
-             leave-active-class="animated fadeOut")
-    article.message.is-warning(v-show="message")
-      .message-header
-        p(v-html="title")
-        button.delete(@click="toggle")
-      .message-body(v-html="body")
+  .columns
+    .column.is-12
+      article.message.is-warning
+        .message-header
+          p(v-html="title")
+          button.delete(@click="toggle")
+        .message-body(v-html="body")
 </template>
 
 <script>
