@@ -6,7 +6,9 @@
           h3.card-header-title(v-html="title")
         .card-content
           .content
-            p(v-html="body")
+            span(v-for="section in body")
+              h5(v-html="section.title")
+              p(v-html="section.body")
 </template>
 
 <script>
@@ -25,9 +27,20 @@
 
 <style lang="scss" scoped="scoped">
   .content {
+    h5,
     p {
       text-align: justify;
-      line-height: 2rem;
+      line-height: 2.25rem;
+      margin-bottom: 0;
+    }
+
+    h5 {
+      margin-top: 2rem;
+      font-weight: 500;
+    }
+
+    span:first-of-type > h5 {
+      margin-top: 0;
     }
   }
 </style>
