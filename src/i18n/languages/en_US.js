@@ -9,8 +9,7 @@ export const en_US = {
     about: 'This tool'
   },
   about: {
-    title: 'This tool',
-    body: 'Soon...'
+    title: 'This tool'
   },
   example: {
     header: 'Example'

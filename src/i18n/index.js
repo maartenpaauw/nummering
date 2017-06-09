@@ -6,5 +6,6 @@ Vue.use(Vuei18n)
 
 export default new Vuei18n({
   locale: 'nl_NL',
+  fallbackLocale: 'nl_NL',
   messages
 })
