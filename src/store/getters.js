@@ -1,4 +1,4 @@
-import { generate, generateDemoRange } from '../range'
+import { generate, generateDemoRange } from '@/range'
 
 export const getters = {
   filename: state => {

@@ -1,4 +1,4 @@
-import { values } from '../settings'
+import { values } from '@/settings'
 
 const settings = {
   ...values

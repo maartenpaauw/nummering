@@ -4,7 +4,7 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import stream from '../stream/index'
+  import stream from '@/stream'
 
   export default {
     name: 'v-download',
