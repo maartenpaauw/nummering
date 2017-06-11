@@ -91,7 +91,7 @@
     "lint-staged": "3.6.1",
     "lolex": "1.6.0",
     "mocha": "3.4.2",
-    "nightwatch": "0.9.15",
+    "nightwatch": "0.9.16",
     "node-sass": "4.5.3",
     "opn": "5.1.0",
     "optimize-css-assets-webpack-plugin": "2.0.0",
