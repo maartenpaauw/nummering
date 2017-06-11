@@ -26,7 +26,7 @@
       'v-setting': Setting
     },
     computed: {
-      ...mapGetters([
+      ...mapGetters('settings', [
         'settings'
       ]),
       title () {

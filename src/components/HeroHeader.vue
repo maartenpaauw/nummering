@@ -3,7 +3,7 @@
     header.nav
       .container
         .nav-center
-          a.nav-item(:href="github",
+          a.nav-item(href="https://github.com/maartenpaauw/nummering",
                      target="_blank",
                      :title="title")
             span.icon
@@ -14,9 +14,6 @@
   export default {
     name: 'v-hero-header',
     computed: {
-      github () {
-        return 'https://github.com/maartenpaauw/nummering'
-      },
       title () {
         return this.$t('header.on_github')
       }

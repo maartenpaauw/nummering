@@ -9,7 +9,7 @@
   export default {
     name: 'v-download',
     computed: {
-      ...mapGetters([
+      ...mapGetters('settings', [
         'filename',
         'header',
         'range'

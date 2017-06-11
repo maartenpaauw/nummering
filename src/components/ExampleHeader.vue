@@ -9,7 +9,7 @@
   export default {
     name: 'v-example-header',
     computed: {
-      ...mapGetters([
+      ...mapGetters('settings', [
         'header'
       ])
     }

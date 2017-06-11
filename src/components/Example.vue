@@ -25,7 +25,7 @@
       'v-example-number': ExampleNumber
     },
     computed: {
-      ...mapGetters([
+      ...mapGetters('settings', [
         'demo_range'
       ]),
       header () {

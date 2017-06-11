@@ -26,7 +26,7 @@
     },
     computed: {
       value () {
-        return this.$store.getters[this.setting]
+        return this.$store.getters[`settings/${this.setting}`]
       },
       type () {
         return types[this.setting]
@@ -45,7 +45,7 @@
       }
     },
     methods: {
-      ...mapActions([
+      ...mapActions('settings', [
         'updateSetting'
       ]),
       change (e) {

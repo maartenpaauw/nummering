@@ -15,7 +15,7 @@
       }
     },
     methods: {
-      ...mapActions([
+      ...mapActions('settings', [
         'updateSetting'
       ]),
       reset_it () {
