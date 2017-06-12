@@ -4,7 +4,8 @@
 
 <script>
   import _ from 'lodash'
-  import { values } from '../settings'
+  import { mapActions } from 'vuex'
+  import { values } from '@/settings'
 
   export default {
     name: 'v-reset',
@@ -14,9 +15,12 @@
       }
     },
     methods: {
+      ...mapActions('settings', [
+        'updateSetting'
+      ]),
       reset_it () {
         _.forEach(values, (value, key) => {
-          this.$store.dispatch('updateSetting', {
+          this.updateSetting({
             setting: key,
             value: value
           })

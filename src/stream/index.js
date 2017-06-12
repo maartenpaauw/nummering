@@ -1,4 +1,4 @@
-import { values } from '../settings'
+import { values } from '@/settings'
 
 export default function stream (range, header = values.header, filename = values.filename) {
   const data = []

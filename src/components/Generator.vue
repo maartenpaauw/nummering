@@ -14,10 +14,10 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   import Settings from '@/components/Settings'
   import Example from '@/components/Example'
   import Message from '@/components/Message'
-  import { mapGetters } from 'vuex'
 
   export default {
     name: 'v-generator',
@@ -26,10 +26,8 @@
       'v-message': Message,
       'v-settings': Settings
     },
-    computed: {
-      ...mapGetters([
-        'message'
-      ])
-    }
+    computed: mapGetters([
+      'message'
+    ])
   }
 </script>

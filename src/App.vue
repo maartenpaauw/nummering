@@ -8,6 +8,7 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   import Footer from '@/components/Footer'
   import Hero from '@/components/Hero'
 
@@ -16,6 +17,23 @@
     components: {
       'v-footer': Footer,
       'v-hero': Hero
+    },
+    computed: mapGetters('languages', [
+      'i18n'
+    ]),
+    methods: {
+      setLocale (locale) {
+        this.$i18n.locale = locale
+        document.title = `${this.$t('hero.title')} — ${this.$t('hero.subtitle').replace(/<(?:.|\n)*?>/gm, '')}`
+      }
+    },
+    watch: {
+      i18n (value) {
+        this.setLocale(value)
+      }
+    },
+    created () {
+      this.setLocale(this.i18n)
     }
   }
 </script>

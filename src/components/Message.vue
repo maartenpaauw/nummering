@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
+  import { mapGetters, mapActions } from 'vuex'
 
   export default {
     name: 'v-message',
@@ -25,10 +25,11 @@
       }
     },
     methods: {
+      ...mapActions([
+        'toggleMessage'
+      ]),
       toggle () {
-        this.$store.dispatch('toggleMessage', {
-          value: !this.message
-        })
+        this.toggleMessage(this.message)
       }
     }
   }

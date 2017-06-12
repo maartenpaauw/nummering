@@ -4,12 +4,12 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import stream from '../stream/index'
+  import stream from '@/stream'
 
   export default {
     name: 'v-download',
     computed: {
-      ...mapGetters([
+      ...mapGetters('settings', [
         'filename',
         'header',
         'range'

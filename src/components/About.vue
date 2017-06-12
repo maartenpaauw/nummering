@@ -29,7 +29,6 @@
   .content {
     h5,
     p {
-      text-align: justify;
       line-height: 2.25rem;
       margin-bottom: 0;
     }
