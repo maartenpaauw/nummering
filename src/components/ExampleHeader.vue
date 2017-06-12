@@ -8,10 +8,8 @@
 
   export default {
     name: 'v-example-header',
-    computed: {
-      ...mapGetters('settings', [
-        'header'
-      ])
-    }
+    computed: mapGetters('settings', [
+      'header'
+    ])
   }
 </script>

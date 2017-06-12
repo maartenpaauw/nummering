@@ -26,10 +26,8 @@
       'v-message': Message,
       'v-settings': Settings
     },
-    computed: {
-      ...mapGetters([
-        'message'
-      ])
-    }
+    computed: mapGetters([
+      'message'
+    ])
   }
 </script>
