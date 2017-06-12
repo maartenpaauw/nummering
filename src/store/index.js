@@ -8,6 +8,7 @@ import mutations from './mutations'
 import plugins from './plugins'
 
 import settings from './modules/settings'
+import languages from './modules/languages'
 
 Vue.use(Vuex)
 
@@ -18,6 +19,7 @@ export default new Vuex.Store({
   mutations,
   plugins,
   modules: {
-    settings
+    settings,
+    languages
   }
 })
