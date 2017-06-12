@@ -5,18 +5,12 @@
         p {{ created_with }}
           span.fa.fa-heart.heart
           | {{ created_by }}
-          a.is-dark.name(:href="email", v-html="name")
+          a.is-dark.name(href="mailto:maartenpaauw@gmail.com") Maarten Paauw
 </template>
 
 <script>
   export default {
     name: 'v-footer',
-    data () {
-      return {
-        name: 'Maarten Paauw',
-        email: `mailto:maartenpaauw@gmail.com`
-      }
-    },
     computed: {
       created_with () {
         return `${this.$t('footer.created_with')} `

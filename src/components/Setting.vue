@@ -13,7 +13,8 @@
 </template>
 
 <script>
-  import { types } from '../settings'
+  import { mapActions } from 'vuex'
+  import { types } from '@/settings'
 
   export default {
     name: 'v-setting',
@@ -25,7 +26,7 @@
     },
     computed: {
       value () {
-        return this.$store.getters[this.setting]
+        return this.$store.getters[`settings/${this.setting}`]
       },
       type () {
         return types[this.setting]
@@ -44,8 +45,11 @@
       }
     },
     methods: {
+      ...mapActions('settings', [
+        'updateSetting'
+      ]),
       change (e) {
-        this.$store.dispatch('updateSetting', {
+        this.updateSetting({
           setting: this.setting,
           value: this.getValue(e.target.value)
         })
