@@ -24,6 +24,6 @@
   }
 
   span {
-    padding: 0.27rem 0;
+    margin: 0.26rem 0;
   }
 </style>
