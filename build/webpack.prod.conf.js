@@ -74,7 +74,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       ),
       minimize: true,
       purifyOptions: {
-        whitelist: ['*columns*']
+        whitelist: ['*columns*', 'flag-icon-nl', 'flag-icon-us']
       }
     }),
     // generate dist index.html with correct asset hash for caching.
