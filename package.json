@@ -128,7 +128,10 @@
   },
   "greenkeeper": {
     "branchPrefix": "dependency-update-",
-    "label": "dependency-update"
+    "label": "dependency-update",
+    "ignore": [
+      "webpack"
+    ]
   },
   "engines": {
     "node": ">= 4.0.0",
