@@ -4,6 +4,7 @@ node_modules/
 dist/
 npm-debug.log*
 yarn.lock
+package-lock.json
 yarn-debug.log*
 yarn-error.log*
 test/unit/coverage
