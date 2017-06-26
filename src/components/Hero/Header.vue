@@ -3,7 +3,7 @@
     header.nav
       .container
         .nav-left
-          a.nav-item.is-active
+          router-link(class="nav-item is-active", :to="routeGenerate")
             span.icon
               i.fa.fa-file-excel-o
             span.brand(v-html="brand")
@@ -22,6 +22,9 @@
     computed: {
       brand () {
         return this.$t('hero.title')
+      },
+      routeGenerate () {
+        return { name: 'generator' }
       },
       title () {
         return this.$t('header.on_github')
