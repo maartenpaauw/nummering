@@ -31,7 +31,7 @@
 </script>
 
 <style lang="scss" scoped="scoped">
-  @import "../../node_modules/bulma/sass/utilities/variables";
+  @import "../../../node_modules/bulma/sass/utilities/variables";
 
   .card-footer-item {
     color: $red;

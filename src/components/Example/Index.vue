@@ -15,14 +15,14 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import ExampleHeader from '@/components/ExampleHeader'
-  import ExampleNumber from '@/components/ExampleNumber'
+  import Header from '@/components/Example/Header'
+  import Number from '@/components/Example/Number'
 
   export default {
     name: 'v-example',
     components: {
-      'v-example-header': ExampleHeader,
-      'v-example-number': ExampleNumber
+      'v-example-header': Header,
+      'v-example-number': Number
     },
     computed: {
       ...mapGetters('settings', [

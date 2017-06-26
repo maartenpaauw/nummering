@@ -15,8 +15,8 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import Settings from '@/components/Settings'
-  import Example from '@/components/Example'
+  import Settings from '@/components/Settings/Index'
+  import Example from '@/components/Example/Index'
   import Message from '@/components/Message'
 
   export default {
