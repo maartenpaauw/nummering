@@ -14,9 +14,9 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import Setting from '@/components/Setting'
-  import Reset from '@/components/Reset'
-  import Download from '@/components/Download'
+  import Setting from '@/components/Settings/Setting'
+  import Reset from '@/components/Settings/Reset'
+  import Download from '@/components/Settings/Download'
 
   export default {
     name: 'v-settings',

@@ -10,7 +10,7 @@
 <script>
   import { mapGetters } from 'vuex'
   import Footer from '@/components/Footer'
-  import Hero from '@/components/Hero'
+  import Hero from '@/components/Hero/Index'
 
   export default {
     name: 'app',
