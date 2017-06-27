@@ -3,10 +3,10 @@
     header.nav
       .container
         .nav-left
-          router-link(class="nav-item is-active", :to="routeGenerate")
+          router-link(class="nav-item is-active brand", :to="routeGenerate")
             span.icon
               i.fa.fa-file-excel-o
-            span.brand(v-html="brand")
+            span.name(v-html="brand")
         .nav-center
           a.nav-item(href="https://github.com/maartenpaauw/nummering",
                      target="_blank",
@@ -35,6 +35,8 @@
 
 <style lang="scss" scoped="scoped">
   .brand {
-    margin-left: 0.25rem;
+    .name {
+      margin-left: 0.25rem;
+    }
   }
 </style>
