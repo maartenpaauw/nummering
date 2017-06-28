@@ -29,7 +29,7 @@
         'toggleMessage'
       ]),
       toggle () {
-        this.toggleMessage(this.message)
+        this.toggleMessage(!this.message)
       }
     }
   }
