@@ -30,9 +30,9 @@
     "lint-staged": "lint-staged"
   },
   "dependencies": {
-    "animate.css": "^3.5.2",
+    "animate.css": "3.5.2",
     "bulma": "0.4.3",
-    "flag-icon-css": "^2.8.0",
+    "flag-icon-css": "2.8.0",
     "font-awesome": "4.7.0",
     "lodash": "4.17.4",
     "vee-validate": "2.0.0-rc.7",
