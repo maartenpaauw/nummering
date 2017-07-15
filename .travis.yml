@@ -46,6 +46,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
+  local_dir: dist
+  fqdn: nummering.nl
   on:
     branch: master
-  local_dir: dist
