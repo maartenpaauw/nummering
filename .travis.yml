@@ -48,5 +48,7 @@ deploy:
   github_token: $GITHUB_TOKEN
   local_dir: dist
   fqdn: nummering.nl
+  email: maartenpaauw@gmail.com
+  name: "Maarten Paauw"
   on:
     branch: master
