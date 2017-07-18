@@ -25,7 +25,7 @@ export const nl_NL = {
       },
       {
         title: 'Let op!',
-        body: 'Deze tool wordt gemaakt voor een schoolproject. Gebruik op eigen risico. Fouten kunnen gemeld worden op GitHub via de volgende link <a href="https://github.com/maartenpaauw/nummering/issues/new" target="_blank">https://github.com/maartenpaauw/nummering</a> of door een e-mail te sturen naar <a href="mailto:maartenpaauw@gmail.com">maartenpaauw@gmail.com</a>.'
+        body: 'Deze tool is gemaakt voor een schoolproject. Gebruik op eigen risico. Fouten kunnen gemeld worden op GitHub via de volgende link <a href="https://github.com/maartenpaauw/nummering/issues/new" target="_blank">https://github.com/maartenpaauw/nummering</a> of door een e-mail te sturen naar <a href="mailto:maartenpaauw@gmail.com">maartenpaauw@gmail.com</a>.'
       }
     ]
   },
@@ -41,7 +41,7 @@ export const nl_NL = {
   },
   message: {
     title: 'Let op!',
-    body: 'Deze tool wordt gemaakt voor een schoolproject. Gebruik op eigen risico. Fouten kunnen gemeld worden op GitHub via de volgende link <a href="https://github.com/maartenpaauw/nummering/issues/new" target="_blank">https://github.com/maartenpaauw/nummering</a> of door een e-mail te sturen naar <a href="mailto:maartenpaauw@gmail.com">maartenpaauw@gmail.com</a>.'
+    body: 'Deze tool is gemaakt voor een schoolproject. Gebruik op eigen risico. Fouten kunnen gemeld worden op GitHub via de volgende link <a href="https://github.com/maartenpaauw/nummering/issues/new" target="_blank">https://github.com/maartenpaauw/nummering</a> of door een e-mail te sturen naar <a href="mailto:maartenpaauw@gmail.com">maartenpaauw@gmail.com</a>.'
   },
   settings: {
     title: 'Instellingen',
