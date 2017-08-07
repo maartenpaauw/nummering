@@ -11,6 +11,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var PurifyCSSPlugin = require('purifycss-webpack')
 var FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+var OptimizeJsPlugin = require("optimize-js-plugin")
 
 var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -56,6 +57,9 @@ var webpackConfig = merge(baseWebpackConfig, {
         screw_ie8: true
       },
       sourceMap: false
+    }),
+    new OptimizeJsPlugin({
+      "sourceMap": false
     }),
     // extract css into its own file
     new ExtractTextPlugin({
