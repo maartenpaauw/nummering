@@ -4,9 +4,9 @@
       h3.card-header-title(v-html="title")
     .card-content
       .content
-        v-setting(v-for="(setting, index) in settings",
-                  :key="index",
-                  :setting="index")
+        v-setting(v-for="(setting, key) in settings",
+                  :key="key",
+                  :setting="key")
     footer.card-footer
       v-download
       v-reset

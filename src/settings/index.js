@@ -1,5 +1,5 @@
 export const types = {
-  filename: 'text',
+  filename: 'addon',
   header: 'text',
   start: 'number',
   end: 'number',

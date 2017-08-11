@@ -1,67 +1,36 @@
 <template lang="pug">
-  span
-    label.label(v-html="label")
-    .field(:class="{ 'has-addons': isFilename }")
-      p.control(:class="{ 'is-expanded': isFilename }")
-        input.input(:type="type",
-                    :placeholder="placeholder",
-                    :value="value",
-                    @input="change",
-                    :min="min")
-      p.control(v-if="isFilename")
-        a.button.is-static .csv
+  component(:is="component",
+            :setting="setting")
 </template>
 
 <script>
-  import { mapActions } from 'vuex'
-  import { types } from '@/settings'
+  import type from '@/mixins/setting/type'
+  import properties from '@/mixins/setting/properties'
 
+  import Addon from '@/components/Settings/Types/Addon'
+  import Number from '@/components/Settings/Types/Number'
+  import Text from '@/components/Settings/Types/Text'
+  
   export default {
     name: 'v-setting',
-    props: {
-      setting: {
-        type: [String, Number],
-        required: true
-      }
+    components: {
+      SettingAddon: Addon,
+      SettingNumber: Number,
+      SettingText: Text
     },
     computed: {
-      value () {
-        return this.$store.getters[`settings/${this.setting}`]
-      },
-      type () {
-        return types[this.setting]
-      },
-      label () {
-        return this.$t(`settings.${this.setting}.label`)
-      },
-      placeholder () {
-        return this.$t(`settings.${this.setting}.placeholder`)
-      },
-      min () {
-        return (this.type === 'number') ? 0 : false
-      },
-      isFilename () {
-        return this.setting === 'filename'
+      component () {
+        return `setting-${this.type}`
       }
     },
-    methods: {
-      ...mapActions('settings', [
-        'updateSetting'
-      ]),
-      change (e) {
-        this.updateSetting({
-          setting: this.setting,
-          value: this.getValue(e.target.value)
-        })
-      },
-      getValue (value) {
-        return this.type === 'number' ? parseInt(value) : value
-      }
-    }
+    mixins: [
+      type,
+      properties
+    ]
   }
 </script>
 
-<style lang="scss" scoped="scoped">
+<style lang="scss">
   p {
     margin-bottom: 0 !important;
   }
