@@ -8,6 +8,7 @@
   import properties from '@/mixins/setting/properties'
 
   import Addon from '@/components/Settings/Types/Addon'
+  import Checkbox from '@/components/Settings/Types/Checkbox'
   import Number from '@/components/Settings/Types/Number'
   import Text from '@/components/Settings/Types/Text'
   
@@ -15,6 +16,7 @@
     name: 'v-setting',
     components: {
       SettingAddon: Addon,
+      SettingCheckbox: Checkbox,
       SettingNumber: Number,
       SettingText: Text
     },

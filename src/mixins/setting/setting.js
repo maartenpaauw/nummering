@@ -19,11 +19,17 @@ export default {
     change (e) {
       this.updateSetting({
         setting: this.setting,
-        value: this.getValue(e.target.value)
+        value: this.getValue(e)
       })
     },
-    getValue (value) {
-      return this.type === 'number' ? parseInt(value) : value
+    getValue (event) {
+      if (this.type === 'number') {
+        return parseInt(event.target.value)
+      } else if (this.type === 'checkbox') {
+        return event.target.checked
+      } else {
+        return event.target.value
+      }
     }
   }
 }

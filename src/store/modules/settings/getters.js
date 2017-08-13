@@ -25,6 +25,9 @@ export default {
   leading_zeros: state => {
     return state.settings.leading_zeros
   },
+  format_number: state => {
+    return state.settings.format_number
+  },
   range: state => {
     return generate(state.settings)
   },
