@@ -55,7 +55,7 @@
     "babel-plugin-transform-runtime": "6.23.0",
     "babel-preset-env": "1.6.0",
     "babel-preset-stage-2": "6.24.1",
-    "babel-register": "6.24.1",
+    "babel-register": "6.26.0",
     "chai": "4.1.1",
     "chalk": "2.1.0",
     "chromedriver": "2.31.0",
