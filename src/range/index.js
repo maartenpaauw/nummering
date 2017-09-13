@@ -1,16 +1,12 @@
 import _ from 'lodash'
+import numeral from 'numeral'
+import 'numeral/locales/nl-nl'
 
-function padding (number, size) {
-  let s = String(number)
-  while (s.length < size + 1) {
-    s = '0' + s
-  }
-  return s
-}
+numeral.locale('nl-nl')
 
 export function generate (settings, start = settings.start, end = settings.end) {
   return _.map(_.range(start, (end + 1), settings.step), (number) => {
-    return `${settings.prefix}${padding(number, settings.leading_zeros)}${settings.suffix}`.trim()
+    return `${settings.prefix}${numeral(number).format(`${'0'.repeat(settings.leading_zeros)}${settings.format_number ? ',' : ''}`)}${settings.suffix}`.trim()
   })
 }
 

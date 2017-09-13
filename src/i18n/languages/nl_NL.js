@@ -78,6 +78,10 @@ export const nl_NL = {
     leading_zeros: {
       label: 'Leidende nullen',
       placeholder: '@:settings.leading_zeros.label'
+    },
+    format_number: {
+      label: 'Duizendtallen scheiden',
+      placeholder: 'Duizendtallen scheiden met een punt.'
     }
   },
   not_found: {
