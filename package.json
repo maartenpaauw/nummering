@@ -121,7 +121,7 @@
     "stylelint-config-standard": "17.0.0",
     "stylelint-processor-html": "1.0.0",
     "stylus-loader": "3.0.1",
-    "url-loader": "0.5.8",
+    "url-loader": "0.6.1",
     "vue-loader": "13.0.5",
     "vue-style-loader": "3.0.3",
     "vue-template-compiler": "2.4.4",
