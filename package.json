@@ -124,7 +124,7 @@
     "url-loader": "0.5.8",
     "vue-loader": "13.0.5",
     "vue-style-loader": "3.0.3",
-    "vue-template-compiler": "2.4.4",
+    "vue-template-compiler": "2.5.0",
     "webpack": "3.6.0",
     "webpack-bundle-analyzer": "2.9.0",
     "webpack-dev-middleware": "1.12.0",
