@@ -42,7 +42,7 @@
     "vue-i18n": "7.3.0",
     "vue-router": "2.7.0",
     "vuex": "2.4.1",
-    "vuex-persistedstate": "2.0.0"
+    "vuex-persistedstate": "2.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "3.2.0",
