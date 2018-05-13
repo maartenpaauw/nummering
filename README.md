@@ -1,6 +1,5 @@
 # Nummering
 
-[![Greenkeeper](https://badges.greenkeeper.io/maartenpaauw/nummering.svg?token=7fe72e851f47312f8c6963861d5cf25b000ee13180dda2def317aac1ed687eab&ts=1494959305804)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/maartenpaauw/nummering.svg?branch=master)](https://travis-ci.org/maartenpaauw/nummering)
 [![Dependencies Status](https://david-dm.org/maartenpaauw/nummering/status.svg)](https://david-dm.org/maartenpaauw/nummering)
 [![Dev Dependencies Status](https://david-dm.org/maartenpaauw/nummering/dev-status.svg)](https://david-dm.org/maartenpaauw/nummering?type=dev)
